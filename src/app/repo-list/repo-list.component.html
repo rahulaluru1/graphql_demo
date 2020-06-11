@@ -1,0 +1,22 @@
+
+<div>
+    <div class="repositories">
+        <h1>Repositories</h1>
+    <div *ngFor="let repo of repos | async">
+        <div class="card" style="width: 100%; margin-top: 10px">
+          <div class="card-body">
+            <h5 class="card-title">{{repo.title}}</h5>
+            <p class="card-text">{{repo.description}}</p>
+            <!-- <a href="{{repo.url}}" class="card-link">Go to repo ...</a> -->
+            <a href="#" (click)="nameClick(repo.author)" id="{{repo.author}}"> View Contributors</a>
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class="contributor-container" id="contributor-container" >
+        <h1  id="heading">Contributors</h1>
+        <div id="contributors">
+          <h3>Click on  Repositories to see the Contributors </h3>
+      </div>
+      </div>
+</div>

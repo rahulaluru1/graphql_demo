@@ -1,0 +1,22 @@
+.repositories{
+    
+    display: inline-block;
+    border: black;
+    background: grey;
+    margin: 4%;
+    width: 40%;
+    height: 90%;
+    overflow-x: hidden;
+}
+
+.contributor-container{
+    
+    display: inline-block;
+    border: black;
+    background: lightcoral;
+    margin: 4%;
+    width: 40%;
+    height: 90%;
+    overflow-x: hidden;
+    padding-bottom: 35%;
+}

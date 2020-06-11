@@ -1,6 +1,7 @@
 var express = require('express');
 var express_graphql = require('express-graphql');
 var { buildSchema } = require('graphql');
+var cors = require('cors');
 // GraphQL schema
 var schema = buildSchema(`
     type Query {
@@ -20,7 +21,7 @@ var repoData = [
     {
         id: 1,
         title: 'The Complete Node.js Developer repo',
-        author: 'Rahul Aluru',
+        author: 'Rahul Aluru, Vatsa',
         description: 'Learn Node.js by building real-world applications with Node, Express, MongoDB, Mocha, and more!',
         topic: 'Node.js',
         url: 'https://github.com/rahulaluru1/keepapp'
@@ -57,6 +58,7 @@ var root = {
 };
 // Create an express server and a GraphQL endpoint
 var app = express();
+app.use(cors()) ;
 app.use('/graphql', express_graphql({
     schema: schema,
     rootValue: root,
